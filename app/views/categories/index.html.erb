@@ -1,0 +1,12 @@
+<%= link_to 'New Category', new_category_path %>
+
+<% if @categories.present? %>
+	<ul id="categories">
+		<%= suckerfish @categories %>
+	</ul>	
+<% else %>
+	<h3>There are currently no categories.</h3>
+<% end %>
+
+
+
