@@ -1,9 +1,9 @@
 CategoriesAncestry::Application.routes.draw do
 
   resources :categories do
-	collection do
-		post :sort
-	end
+    collection do
+      post :sort
+    end
   end
 
   # The priority is based upon order of creation:

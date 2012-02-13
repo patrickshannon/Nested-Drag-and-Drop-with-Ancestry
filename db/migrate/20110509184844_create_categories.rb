@@ -4,7 +4,7 @@ class CreateCategories < ActiveRecord::Migration
       t.string :title
       t.string :position
       t.string :ancestry
-	  t.integer :parent_id
+      t.integer :parent_id
       t.timestamps
     end
   end

@@ -41,7 +41,7 @@ class CategoriesController < ApplicationController
   # POST /categories.xml
   def create
     @category = Category.new(params[:category])
-	puts "#{params[:category]}"
+    puts "#{params[:category]}"
 
     respond_to do |format|
       if @category.save
@@ -83,11 +83,11 @@ class CategoriesController < ApplicationController
   end
 
   def sort
-	params[:category].sort { |a, b| a <=> b }.each_with_index do |id, index|
-	  value = id[1][:id]
-	  position = id[1][:position]
-	  position = position.to_i + 1
-	  parent = id[1][:parent_id]
+  params[:category].sort { |a, b| a <=> b }.each_with_index do |id, index|
+    value = id[1][:id]
+    position = id[1][:position]
+    position = position.to_i + 1
+    parent = id[1][:parent_id]
       Category.update(value, :position => position, :parent_id => parent)
     end
     render :nothing => true
