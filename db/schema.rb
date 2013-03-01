@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110509184844) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
-    t.integer  "position"
+    t.string   "position"
     t.string   "ancestry"
     t.integer  "parent_id"
     t.datetime "created_at"
